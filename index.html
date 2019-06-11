@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+    //user choice
+    document.onkeyup = function(event) {
+        var userchoice = event.key
+        alert("userchoice is " + userchoice);
+
+        //computer choice
+        var computerchoices = ["r", "p", "s"];
+        var computerchoice = computerchoices[parseInt(Math.random() * computerchoices.length)];
+        alert("computer choice is " + computerchoice);
+
+        //result
+        if (userchoice === 'r' && computerchoice === 'r') {
+        alert("nobody win!")
+      }
+      else if (userchoice === 'r' && computerchoice === 'p') {
+        alert("computer win!")
+      }
+      else if (userchoice === 'r' && computerchoice === 's') {
+        alert("you win!")
+      }
+      else if (userchoice === 'p' && computerchoice === 'p') {
+        alert("nobody win!")
+      }
+      else if (userchoice === 'p' && computerchoice === 's') {
+        alert("computer win!")
+      }
+      else if (userchoice === 'p' && computerchoice === 'r') {
+        alert("you win!")
+      }
+      else if (userchoice === 's' && computerchoice === 's') {
+        alert("nobody win!")
+      }
+      else if (userchoice === 's' && computerchoice === 'r') {
+        alert("computer win!")
+      }
+      else if (userchoice === 's' && computerchoice === 'p') {
+        alert("you win!")
+      }
+      else {
+        alert("Please, enter 'r', 'p' or 's'")
+      }
+    }
+    </script>
+</body>
+</html>
